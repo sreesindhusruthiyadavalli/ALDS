@@ -3,6 +3,8 @@ import itertools
 import time
 
 # Function for extracting zip files to test if the password works!
+
+
 def extractFile(zip_file, password):
     try:
         zip_file.extractall(path='/tmp', pwd=password.encode())
@@ -11,6 +13,7 @@ def extractFile(zip_file, password):
         exit(0)
     except Exception as e:
         pass
+
 
 # Main code starts here...
 # The file name of the zip file.
@@ -34,5 +37,3 @@ for c in itertools.product(alphabet, repeat=3):
 
 # If no password was found by the end, let us know!
 print('Password not found.')
-
-

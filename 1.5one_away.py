@@ -9,21 +9,22 @@ def one_edit(str1, str2):
                 print(non_exis_chars)
                 if len(non_exis_chars) > 1:
                     return False
-                    
-    if  str1_len <  str2_len:  
+
+    if str1_len < str2_len:
         for x in str2:
             if x not in str1:
                 non_exis_chars.append(x)
                 if len(non_exis_chars) > 1:
                     return False
-    if  str1_len >  str2_len:
+    if str1_len > str2_len:
         for x in str1:
             if x not in str2:
                 non_exis_chars.append(x)
                 if len(non_exis_chars) > 1:
                     return False
-    return True            
-        
+    return True
+
+
 data = [('pale', 'ple', True),
         ('pales', 'pale', True),
         ('pale', 'bale', True),
@@ -44,14 +45,13 @@ data = [('pale', 'ple', True),
         ('pale', 'pkle', True),
         ('pkle', 'pable', False),
         ('pal', 'palks', False),
-        ('palks', 'pal', False) ]          
-        
-for x,y,z in data:
-    k = one_edit(x,y)
+        ('palks', 'pal', False)]
+
+for x, y, z in data:
+    k = one_edit(x, y)
     if k == z:
         print("pass")
     else:
         print("fail")
-            
-#print(one_edit())
-        
+
+# print(one_edit())

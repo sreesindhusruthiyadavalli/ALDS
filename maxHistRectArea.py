@@ -19,11 +19,11 @@ def max_rect_area(arr):
                 stack.append(i)
                 i = i + 1
             else:
-                currentarea = arr[top]* (i-stack[-1]-1)
+                currentarea = arr[top] * (i-stack[-1]-1)
             if currentarea > maxarea:
                 maxarea = currentarea
-                
-                
-    print(maxarea)   
-    
-max_rect_area([2,1,2,3,1])    
+
+    print(maxarea)
+
+
+max_rect_area([2, 1, 2, 3, 1])
